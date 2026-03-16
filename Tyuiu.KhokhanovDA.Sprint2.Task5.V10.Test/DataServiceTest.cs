@@ -1,20 +1,16 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using Tyuiu.KhokhanovDA.Sprint2.Task5.V10.Lib;
+﻿using Tyuiu.KhokhanovDA.Sprint2.Task5.V10.Lib;
 
 namespace Tyuiu.KhokhanovDA.Sprint2.Task5.V10.Test
 {
     [TestClass]
-    public class DataServiceTest
+    public sealed class DataServiceTest
     {
         [TestMethod]
         public void TestMethod1()
         {
             DataService ds = new DataService();
-            int n = 21, m = 11, g = 1997; 
-            int wait = 20111997;
-            int res = ds.FindDateOfPreviousDay(g,m,n);
-            Assert.AreEqual(wait, res);
+            string res = ds.FindDateOfPreviousDay(2024, 9, 3);
+            Assert.AreEqual("02.09.2024", res);
         }
     }
 }

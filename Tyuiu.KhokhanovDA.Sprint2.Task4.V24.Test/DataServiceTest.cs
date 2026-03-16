@@ -1,6 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-
 using Tyuiu.KhokhanovDA.Sprint2.Task4.V24.Lib;
 
 namespace Tyuiu.KhokhanovDA.Sprint2.Task4.V24.Test
@@ -12,20 +11,21 @@ namespace Tyuiu.KhokhanovDA.Sprint2.Task4.V24.Test
         public void ValidCondition1()
         {
             DataService ds = new DataService();
-            double x = 1;
-            double y = -23;
+            double x = 10;
+            double y = 5;
             double res = ds.Calculate(x, y);
-            double wait = -7.333;
+            double wait = 0.01;
             Assert.AreEqual(wait, res);
+
         }
         [TestMethod]
         public void ValidCondition2()
         {
             DataService ds = new DataService();
-            double x = 1;
-            double y = 1;
+            double x = 4;
+            double y = 5;
             double res = ds.Calculate(x, y);
-            double wait = 0.837;
+            double wait = 4;
             Assert.AreEqual(wait, res);
         }
     }
