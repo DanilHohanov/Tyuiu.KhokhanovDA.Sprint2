@@ -11,22 +11,22 @@ namespace Tyuiu.KhokhanovDA.Sprint2.Task4.V24.Test
         public void ValidCondition1()
         {
             DataService ds = new DataService();
-            double x = 10;
-            double y = 5;
+            double x = 2, y = -23;
             double res = ds.Calculate(x, y);
-            double wait = 0.01;
-            Assert.AreEqual(wait, res);
+            double wait = 60.5;
 
+            Assert.AreEqual(res, wait);
         }
+
         [TestMethod]
         public void ValidCondition2()
         {
             DataService ds = new DataService();
-            double x = 4;
-            double y = 5;
+            double x = 1, y = 0;
             double res = ds.Calculate(x, y);
-            double wait = 4;
-            Assert.AreEqual(wait, res);
+            double wait = 0.734;
+
+            Assert.AreEqual(res, wait);
         }
     }
 }

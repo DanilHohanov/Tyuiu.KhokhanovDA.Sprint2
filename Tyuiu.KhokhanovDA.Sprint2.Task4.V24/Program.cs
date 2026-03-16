@@ -12,8 +12,7 @@ namespace Tyuiu.KhokhanovDA.Sprint2.Task4.V24
         static void Main(string[] args)
         {
             DataService ds = new DataService();
-            // Task4
-            Console.Title = "Спринт #2 | Выполнил: Хоханов Д.А. | НТм-24-1";
+            Console.Title = "Спринт#2 | Выполнил: Хоханов Д.А. | НТм-24-1";
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* Спринт #2                                                               *");
             Console.WriteLine("* Тема: Тернарный оператор                                                *");
@@ -23,26 +22,23 @@ namespace Tyuiu.KhokhanovDA.Sprint2.Task4.V24
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
             Console.WriteLine("* Написать программу, которая вычисляет требуемое значение с              *");
-            Console.WriteLine("* использованием тернарного оператора, где пользователь вводит значение   *");
-            Console.WriteLine("* переменных x,y, с клавиатуры                                            *");
-            Console.WriteLine("*                                                                         *");
+            Console.WriteLine("* использованием тернарного опреатора, где пользователь вводит знвчение   *");
+            Console.WriteLine("* переменных x, y с клавиатуры. Ответ округлить до 3 знаков после запятой *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
 
-            Console.WriteLine("Введите значение переменной X: ");
+            Console.WriteLine("Введите x: ");
             double x = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Введите значение переменной Y: ");
+            Console.WriteLine("Введите y: ");
             double y = Convert.ToDouble(Console.ReadLine());
-
-            double res = ds.Calculate(x, y);
 
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
-            Console.WriteLine("Значение функции = " + res);
-            Console.ReadKey();
 
+            Console.WriteLine(ds.Calculate(x, y));
+            Console.ReadKey();
         }
     }
 }
